@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navBar {
+    min-height: 60px;
+    background-color: #111827;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 25px;
+}
+
+.navBar h2 {
+    padding: 0;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hamburger Button */
+#menuBtn {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Main Section */
+.section {
+    background-color: #F3F4F6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    padding: 20px 7px;
+    font-family: Georgia, serif;
+    font-weight: 500;
+}
+
+#para {
+    padding-left: 7px;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Get Started Button */
+#btn {
+    background-color: #2563EB;
+    color: white;
+    height: 3rem;
+    width: 7rem;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin: 30px 7px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #1D4ED8;
+}
+
+/* Cards Container */
+#container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.box {
+    min-height: 7rem;
+    width: 35rem;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.box h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .navBar {
+        position: relative;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    .nav_links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background-color: #111827;
+        padding: 20px;
+        gap: 20px;
+        flex-direction: column;
+        z-index: 10;
+    }
+
+    .nav_links.active {
+        display: flex;
+    }
+
+    #container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
